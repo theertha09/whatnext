@@ -1,0 +1,6 @@
+login
+home
+service
+country
+contact
+blog
