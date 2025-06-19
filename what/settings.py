@@ -64,6 +64,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+
+    "https://ayam-reteat-admin-qejr.vercel.app",
     "http://127.0.0.1:3000",
     "http://localhost:3001",
     "https://what-next-beta.vercel.app"
