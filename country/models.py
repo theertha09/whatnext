@@ -4,8 +4,8 @@ from django.utils.text import slugify
 class Countries(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.TextField()
-    image = models.ImageField(upload_to="media/country_image/")
-    icon = models.ImageField(upload_to="media/country_icon/")
+    image = models.ImageField(upload_to="media/country_image/",null=True, blank=True)
+    icon = models.ImageField(upload_to="media/country_icon/",null=True, blank=True)
     description = models.TextField()
     alt_img_text = models.TextField(max_length=300, null=True, blank=True)
     alt_img_title = models.TextField(max_length=300, null=True, blank=True)
@@ -49,7 +49,7 @@ class Countries(models.Model):
     
 class University(models.Model):
     title = models.CharField(max_length=200)
-    logo = models.ImageField(upload_to="media/university_logo/")
+    logo = models.ImageField(upload_to="media/university_logo/",null=True, blank=True)
     country = models.ForeignKey(Countries, on_delete=models.CASCADE, related_name="universities")
 
     def __str__(self):
@@ -59,7 +59,7 @@ class University(models.Model):
 class WhyChoose(models.Model):  
     title = models.CharField(max_length=200)
     description = models.TextField()
-    icon = models.ImageField(upload_to="media/whychooseus_icon/")
+    icon = models.ImageField(upload_to="media/whychooseus_icon/",null=True, blank=True)
     country = models.ForeignKey(Countries, on_delete=models.CASCADE, related_name="why_choose_reasons")
 
     def __str__(self):

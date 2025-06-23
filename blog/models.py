@@ -20,7 +20,7 @@ class Blogs(models.Model):
     title = models.CharField(max_length=500)
     date = models.DateField()
     time = models.TextField()
-    blog_image = models.ImageField(upload_to="media/blog_image/")
+    blog_image = models.ImageField(upload_to="media/blog_image/",null=True, blank=True)
     author = models.CharField(max_length=500)
     description = models.TextField()
     alt_img_text = models.TextField(max_length=300, null=True, blank=True)

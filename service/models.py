@@ -10,7 +10,7 @@ class ServiceHeader(models.Model):
 class ServiceBody(models.Model):
     service_header = models.ForeignKey(ServiceHeader, on_delete=models.CASCADE, related_name="service_header_body")
     title = models.CharField(max_length=400)
-    image = models.ImageField(upload_to="media/service_images/")
+    image = models.ImageField(upload_to="media/service_images/",null=True, blank=True)
     description = models.TextField()
     alt_img_text = models.TextField(max_length=300, null=True, blank=True)
     alt_img_title = models.TextField(max_length=300, null=True, blank=True)
