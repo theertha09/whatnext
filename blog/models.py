@@ -63,7 +63,7 @@ class Blogs(models.Model):
         return f"/blogs/{self.slug}/"
     
 class BlogInnerPage(models.Model):
-    blog = models.ForeignKey(Blogs, on_delete=models.CASCADE, related_name="inner_descriptions")
+    blog = models.ForeignKey(Blogs, on_delete=models.CASCADE, related_name="inner_descriptions",null=True, blank=True)
     description = models.TextField()
     slug = models.CharField(max_length=200, unique=True, blank=True, null=True)
 

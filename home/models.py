@@ -2,7 +2,7 @@ from django.db import models
 
 class VoiceOfSuccess(models.Model):
     name = models.CharField(max_length=100)
-    video = models.FileField(upload_to='media/voice_of_success/')
+    video = models.FileField(upload_to='media/voice_of_success/',null=True, blank=True)
     thumbnail = models.ImageField(upload_to='media/thumbnails/', null=True, blank=True)
     order = models.PositiveIntegerField(default=0)
     is_active = models.BooleanField(default=True)
