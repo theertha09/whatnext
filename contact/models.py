@@ -3,11 +3,12 @@ from django.db import models
 class Contact(models.Model):
     FINDUS_CHOICES = [
         ('Facebook','Facebook'),
-        ('Whatsapp','Whatsapp'),
         ('Telegram','Telegram'),
-        ('Twitter','Twitter'),
         ('Instagram','Instagram'),
         ('Other','Other'),
+        ('LinkedIn','LinkedIn'),
+        ('Reference','Reference'),
+        ('Google','Google'),
     ]
 
     find_us = models.CharField(max_length=10, choices=FINDUS_CHOICES)
